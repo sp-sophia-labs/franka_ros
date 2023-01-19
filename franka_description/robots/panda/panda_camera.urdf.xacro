@@ -11,7 +11,7 @@
 
   <xacro:if value="$(arg load_camera)">
     <xacro:include filename="$(find franka_description)/robots/common/camera_realsense_D455.xacro"/>
-    <xacro:camera_realsense_D455 ns="panda" xyz="0.05 -0.03 0.03" rpy="0.20 0 -2.36" connected_to="panda_link8"/>
+    <xacro:camera_realsense_D455 ns="panda" xyz="0.00 -0.078 0.1725" rpy="0 0 3.14" connected_to="panda_link7_sc"/>
   </xacro:if>
 
 </robot>
