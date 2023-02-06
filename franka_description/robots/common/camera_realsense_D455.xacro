@@ -39,7 +39,7 @@
         <geometry>
           <mesh filename="package://franka_description/meshes/collision/camera_realsense_D455.stl" scale="0.02 0.02 0.02"/>
         </geometry>
-        <origin xyz="-0.0135 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 0 3.14"/>
       </visual>
       <inertial>
         <mass value="1" />
@@ -54,12 +54,13 @@
       <child link="camera_realsense_D455_gazebo_link"/>
     </joint>
 
-    <link name="camera_optical_link"/>
+    <!-- keep camera frame as camera_color_optical_frame so the ros plugin of the camera recognize the frame and related topics are published properly -->
+    <link name="camera_color_optical_frame"/> 
 
     <joint name="camera_optical_joint" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <parent link="camera_realsense_D455_gazebo_link"/>
-      <child link="camera_optical_link"/>
+      <child link="camera_color_optical_frame"/>
     </joint>
 
   </xacro:macro>
