@@ -11,8 +11,11 @@
 
   <xacro:if value="$(arg load_camera)">    
     <xacro:include filename="$(find franka_description)/robots/common/camera_realsense_D455.xacro"/>
-    <!-- based on moveit_calibration -->
-    <xacro:camera_realsense_D455 ns="$(arg arm_id)" xyz="0.0144624 -0.0781259 0.159075" rpy="-0.007257889863961943 -0.008755789136793268 -0.00765949205688231" connected_to="$(arg arm_id)_link7_sc"/>
+    <!-- based on moveit_calibration - old calibration -->
+    <!-- <xacro:camera_realsense_D455 ns="$(arg arm_id)" xyz="0.0144624 -0.0781259 0.159075" rpy="0 0 0" connected_to="$(arg arm_id)_link7_sc"/> -->
+
+    <!-- point cloud calibration - tf after moveit calib of camera_link -->
+    <xacro:camera_realsense_D455 ns="$(arg arm_id)" xyz="0.002 -0.075 0.172" rpy="-0.021 -0.020 -0.026" connected_to="$(arg arm_id)_link7_sc"/> 
   </xacro:if>
 
 </robot>
