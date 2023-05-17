@@ -32,24 +32,6 @@
         </geometry>
       </visual>
       
-      <!-- end left-fingertip -->
-      <visual>
-        <origin xyz="0 0.0015 0.06" rpy="0 0 0" />
-        <geometry>
-          <box size="0.018 0.003 0.015"/>
-        </geometry>
-        <material name="Grey">
-          <color rgba="0.262 0.262 0.262 1"/>
-        </material>
-      </visual>
-      <!-- end left-fingertip collision -->
-      <collision>
-        <origin xyz="0 0.0015 0.06" rpy="0 0 0" />
-        <geometry>
-          <box size="0.018 0.003 0.015" />
-        </geometry>
-      </collision>
-      
       <!-- screw mount -->
       <collision>
         <origin xyz="0 18.5e-3 11e-3" rpy="0 0 0" />
@@ -91,24 +73,6 @@
           <mesh filename="package://${description_pkg}/meshes/visual/finger.dae" />
         </geometry>
       </visual>
-
-      <!-- end right-fingertip -->
-      <visual>
-        <origin xyz="0 -0.0015 0.06" rpy="0 0 0" />
-        <geometry>
-          <box size="0.018 0.003 0.015"/>
-        </geometry>
-        <material name="Grey">
-          <color rgba="0.262 0.262 0.262 1"/>
-        </material>
-      </visual>
-      <!-- end left-fingertip collision -->
-      <collision>
-        <origin xyz="0 -0.0015 0.06" rpy="0 0 0" />
-        <geometry>
-          <box size="0.018 0.003 0.015" />
-        </geometry>
-      </collision>
 
       <!-- screw mount -->
       <collision>
